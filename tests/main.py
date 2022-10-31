@@ -59,6 +59,41 @@ def float_generators():
     )
 
 
+def random_index_generators():
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_index, 10,
+        label=f"FortranRNG.random_index(10) => [0, 9]",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_index, -10,
+        label=f"FortranRNG.random_index(-10) => [-10, -1]",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.front_linear, 10,
+        label=f"FortranRNG.front_linear(10) => [0, 9] ~= 0",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.front_linear, -10,
+        label=f"FortranRNG.front_linear(-10) => [-10, -1] ~= -10",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.back_linear, 10,
+        label=f"FortranRNG.back_linear(10) => [0, 9] ~= 9",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.back_linear, -10,
+        label=f"FortranRNG.back_linear(-10) => [-10, -1] ~= -1",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.middle_linear, 10,
+        label=f"FortranRNG.middle_linear(10) => [0, 9] ~= 4.5",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.middle_linear, -10,
+        label=f"FortranRNG.middle_linear(-10) => [-10, -1] ~= -5.5",
+    )
+
+
 if __name__ == '__main__':
     print("\nFortranRNG Test Suite\n")
     print("Boolean Generator Tests")
@@ -67,3 +102,5 @@ if __name__ == '__main__':
     integer_generators()
     print("Float Generator Tests")
     float_generators()
+    print("ZeroCool Index Generator Tests")
+    random_index_generators()

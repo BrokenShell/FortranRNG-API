@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import bool_router, int_router, float_router
+from app.routers import bool_router, int_router, float_router, index_router
 
 with open("README.md", "r") as file:
     description = file.read()
@@ -8,7 +8,7 @@ with open("README.md", "r") as file:
 API = FastAPI(
     title='FortranRNG API',
     description=description,
-    version='0.0.8',
+    version='0.0.9',
     docs_url='/',
 )
 
@@ -20,5 +20,5 @@ API.add_middleware(
     allow_headers=['*'],
 )
 
-for router in (bool_router, int_router, float_router):
+for router in (bool_router, int_router, float_router, index_router):
     API.include_router(router.Router)

@@ -26,3 +26,8 @@
 - `canonical() -> float`
 - `random_float(low: float, high: float) -> float`
 - `triangular(low: float, high: float, mode: float) -> float`
+
+#### Random Index Generators
+- `random_index(limit) -> int`
+- `front_linear(limit) -> int`
+- `back_linear(limit) -> int`

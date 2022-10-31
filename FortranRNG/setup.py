@@ -15,7 +15,7 @@ setup(
     name='FortranRNG',
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
-    version="1.1.1",
+    version="1.1.2",
     ext_modules=[
         Extension(name='FortranRNG', sources=['FortranRNG.f90']),
     ],

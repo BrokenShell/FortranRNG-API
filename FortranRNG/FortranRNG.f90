@@ -15,8 +15,10 @@ subroutine random_below(limit, output)
     call canonical(result)
     if (limit > 0) then
         output = floor(limit * result)
-    else
+    elseif (limit < 0) then
         output = -floor(-limit * result)
+    else
+        output = 0
     end if
 end subroutine random_below
 
@@ -118,3 +120,66 @@ subroutine triangular(low, high, mode, output)
         output = low + (high - low) * SQRT(rand * mode_factor)
     end if
 end subroutine triangular
+
+subroutine random_index(limit, output)
+    implicit none
+    integer, intent(in) :: limit
+    integer, intent(out) :: output
+    if (limit > 0) then
+        call random_below(limit, output)
+    else
+        call random_below(limit, output)
+        output = output - 1
+    end if
+end subroutine random_index
+
+subroutine front_linear(limit, output)
+    implicit none
+    integer, intent(in) :: limit
+    integer, intent(out) :: output
+    double precision :: real_limit
+    double precision :: result
+    real_limit = limit
+    if (limit > 0) then
+        call triangular(0.0d0, real_limit, 0.0d0, result)
+    elseif (limit < 0) then
+        call triangular(real_limit, 0.0d0, real_limit, result)
+    else
+        result = 0.0
+    end if
+    output = FLOOR(result)
+end subroutine front_linear
+
+subroutine back_linear(limit, output)
+    implicit none
+    integer, intent(in) :: limit
+    integer, intent(out) :: output
+    double precision :: real_limit
+    double precision :: result
+    real_limit = limit
+    if (limit > 0) then
+        call triangular(0.0d0, real_limit, real_limit, result)
+    elseif (limit < 0) then
+        call triangular(real_limit, 0.0d0, 0.0d0, result)
+    else
+        result = 0.0
+    end if
+    output = FLOOR(result)
+end subroutine back_linear
+
+subroutine middle_linear(limit, output)
+    implicit none
+    integer, intent(in) :: limit
+    integer, intent(out) :: output
+    double precision :: real_limit
+    double precision :: result
+    real_limit = limit
+    if (limit > 0) then
+        call triangular(0.0d0, real_limit, real_limit / 2, result)
+    elseif (limit < 0) then
+        call triangular(real_limit, 0.0d0, real_limit / 2, result)
+    else
+        result = 0.0
+    end if
+    output = FLOOR(result)
+end subroutine middle_linear
