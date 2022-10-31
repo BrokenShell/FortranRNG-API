@@ -35,7 +35,7 @@ docker run -it -p 8000:8000 fortran-rng
 ---
 ## FortranRNG Developer Log
 ### FortranRNG API v0.1.0
-- Adds ZeroCool algorithm: `middle_linear` and `quantum_linear`
+- Adds ZeroCool algorithms: `middle_linear` and `quantum_linear`
 - FortranRNG Release v1.1.3
 - Updates test suite to include new algorithms
 
