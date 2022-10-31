@@ -31,3 +31,33 @@ Assumes port 8000 is available on localhost.
 ```shell
 docker run -it -p 8000:8000 fortran-rng
 ```
+
+---
+## FortranRNG Developer Log
+### FortranRNG API v0.0.7
+- Moves Developer Log to `/NOTES.md`
+
+### FortranRNG API v0.0.6
+- Fixes random typos
+
+### FortranRNG API v0.0.5
+- Updates documentation
+- Fixes a few minor typos
+- Adds test suite `/tests/main.py`
+
+### FortranRNG API v0.0.4
+- Adds development log
+- Updates documentation
+- Renames shell script to lesson confusion
+
+### FortranRNG API v0.0.3
+- Fixes name conflict `random_int` => `random_integer`
+- FortranRNG Release v1.1.1
+
+### FortranRNG API v0.0.2
+- Adds `percent_true`, `plus_or_minus` and `plus_or_minus_linear`
+- FortranRNG Beta v0.1.1
+
+### FortranRNG API v0.0.1
+- Basic Functionality
+- FortranRNG Alpha v0.0.1
