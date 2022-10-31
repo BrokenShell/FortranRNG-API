@@ -183,3 +183,18 @@ subroutine middle_linear(limit, output)
     end if
     output = FLOOR(result)
 end subroutine middle_linear
+
+subroutine quantum_linear(limit, output)
+    implicit none
+    integer, intent(in) :: limit
+    integer, intent(out) :: output
+    integer :: result
+    call d(3, result)
+    if (result == 1) then
+        call front_linear(limit, output)
+    elseif (result == 2) then
+        call middle_linear(limit, output)
+    else
+        call back_linear(limit, output)
+    end if
+end subroutine quantum_linear

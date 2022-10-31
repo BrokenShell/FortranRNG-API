@@ -77,6 +77,14 @@ def random_index_generators():
         label=f"FortranRNG.front_linear(-10) => [-10, -1] ~= -10",
     )
     MonkeyScope.distribution_timer(
+        FortranRNG.middle_linear, 10,
+        label=f"FortranRNG.middle_linear(10) => [0, 9] ~= 4.5",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.middle_linear, -10,
+        label=f"FortranRNG.middle_linear(-10) => [-10, -1] ~= -5.5",
+    )
+    MonkeyScope.distribution_timer(
         FortranRNG.back_linear, 10,
         label=f"FortranRNG.back_linear(10) => [0, 9] ~= 9",
     )
@@ -85,12 +93,12 @@ def random_index_generators():
         label=f"FortranRNG.back_linear(-10) => [-10, -1] ~= -1",
     )
     MonkeyScope.distribution_timer(
-        FortranRNG.middle_linear, 10,
-        label=f"FortranRNG.middle_linear(10) => [0, 9] ~= 4.5",
+        FortranRNG.quantum_linear, 10,
+        label=f"FortranRNG.quantum_linear(10) => [0, 9] ~= 4.5",
     )
     MonkeyScope.distribution_timer(
-        FortranRNG.middle_linear, -10,
-        label=f"FortranRNG.middle_linear(-10) => [-10, -1] ~= -5.5",
+        FortranRNG.quantum_linear, -10,
+        label=f"FortranRNG.quantum_linear(-10) => [-10, -1] ~= -5.5",
     )
 
 

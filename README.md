@@ -27,7 +27,9 @@
 - `random_float(low: float, high: float) -> float`
 - `triangular(low: float, high: float, mode: float) -> float`
 
-#### Random Index Generators
-- `random_index(limit) -> int`
-- `front_linear(limit) -> int`
-- `back_linear(limit) -> int`
+#### Random ZeroCool Index Generators
+- `random_index(limit: int) -> int`
+- `front_linear(limit: int) -> int`
+- `middle_linear(limit: int) -> int`
+- `back_linear(limit: int) -> int`
+- `quantum_linear(limit: int) -> int`
