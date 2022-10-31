@@ -3,7 +3,7 @@ To run the API locally you two choices: local virtual environment or Docker. She
 
 ## Local Virtual Environments
 
-### Install Local Virtual Environment `./venv-install.sh`
+### Install Virtual Environment `./venv-install.sh`
 Assumes venv is built and active.
 ```shell
 python -m pip install --upgrade pip setuptools wheel
@@ -13,12 +13,12 @@ rm -rf ./FortranRNG/build
 rm -rf ./FortranRNG/FortranRNG.egg-info
 ```
 
-### Run Local Virtual Environment `./venv-run.sh`
+### Run Virtual Environment `./venv-run.sh`
 ```shell
-python -m uvicorn app.api:API
+python -m uvicorn app.api:API --host=0.0.0.0 --port=8000
 ```
 
-## Docker Environments
+## Local Docker Environments
 
 ### Build Docker Image Locally `./docker-build.sh`
 Assumes Docker Desktop is running in the background.

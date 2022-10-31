@@ -11,14 +11,17 @@ python3 -m pip install FortranRNG
 python3 -m pip install ./FortranRNG
 ```
 
-### FortranRNG Interface
-- `FortranRNG.canonical() -> float`
-- `FortranRNG.random_below(limit: int) -> int`
-- `FortranRNG.random_int(low: int, high: int) -> int`
-- `FortranRNG.random_range(start: int, stop: int, step: int) -> int`
-- `FortranRNG.d(sides: int) -> int`
-- `FortranRNG.dice(rolls: int, sides: int) -> int`
-- `FortranRNG.percent_true(percent: float) -> bool(int)`
-- `FortranRNG.triangular(low: float, high: float, mode: float) -> float`
-- `FortranRNG.plus_or_minus(amount: int) -> int`
-- `FortranRNG.plus_or_minus_linear(amount: int) -> int`
+### FortranRNG Python Interface
+- Boolean Generators
+  - `FortranRNG.percent_true(percent: float) -> bool(int)`
+- Integer Generators
+  - `FortranRNG.random_below(limit: int) -> int`
+  - `FortranRNG.random_int(low: int, high: int) -> int`
+  - `FortranRNG.random_range(start: int, stop: int, step: int) -> int`
+  - `FortranRNG.d(sides: int) -> int`
+  - `FortranRNG.dice(rolls: int, sides: int) -> int`
+  - `FortranRNG.plus_or_minus(amount: int) -> int`
+  - `FortranRNG.plus_or_minus_linear(amount: int) -> int`
+- Float Generators
+  - `FortranRNG.canonical() -> float`
+  - `FortranRNG.triangular(low: float, high: float, mode: float) -> float`

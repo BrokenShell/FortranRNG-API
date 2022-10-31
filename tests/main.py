@@ -1,0 +1,75 @@
+import MonkeyScope
+import FortranRNG
+
+
+def boolean_generators():
+    print("### Boolean Generator Tests")
+    print("```")
+    MonkeyScope.distribution_timer(
+        FortranRNG.percent_true, 33.333,
+        post_processor=bool,
+        label=f"FortranRNG.percent_true(33.333) => bool[True, False] : True ~= 33.333%",
+    )
+    print("```")
+
+
+def integer_generators():
+    print("### Integer Generator Tests")
+    print("```")
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_below, 10,
+        label="FortranRNG.random_below(10) => [0, 10)",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_integer, 1, 10,
+        label="FortranRNG.random_int(1, 10) => [1, 10]",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_range, 2, 11, 2,
+        label="FortranRNG.random_range(2, 11, 2) => [2, 10] by 2",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.d, 10,
+        label="FortranRNG.d(10) => [1, 10]",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.dice, 3, 6,
+        label="FortranRNG.dice(3, 6) => [3, 18] ~= 10.5",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.plus_or_minus, 3,
+        label=f"FortranRNG.plus_or_minus(3) => [-3, 3]",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.plus_or_minus_linear, 3,
+        label=f"FortranRNG.plus_or_minus_linear(3) => [-3, 3] ~= 0",
+    )
+    print("```")
+
+
+def float_generators():
+    print("### Float Generator Tests")
+    print("```")
+    MonkeyScope.distribution_timer(
+        FortranRNG.canonical,
+        post_processor=lambda x: int(x * 10),
+        label="FortranRNG.canonical() => int(10x)[0, 10)",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.random_float, 1, 10,
+        post_processor=int,
+        label="FortranRNG.random_float(1, 10) => int[1, 10)",
+    )
+    MonkeyScope.distribution_timer(
+        FortranRNG.triangular, 0.0, 10.0, 5.0,
+        post_processor=round,
+        label=f"FortranRNG.triangular(0.0, 10.0, 5.0) => round[0, 10] ~= 5.0",
+    )
+    print("```")
+
+
+if __name__ == '__main__':
+    print("\n## FortranRNG Test Suite")
+    boolean_generators()
+    integer_generators()
+    float_generators()

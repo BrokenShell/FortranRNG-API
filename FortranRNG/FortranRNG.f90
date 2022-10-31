@@ -1,17 +1,11 @@
-subroutine canonical(output)
+subroutine percent_true(percent, output)
     implicit none
-    double precision, intent(out) :: output
-    call random_number(output)
-end subroutine canonical
-
-subroutine random_float(low, high, output)
-    implicit none
-    double precision, intent(in) :: low, high
-    double precision, intent(out) :: output
+    double precision, intent(in) :: percent
+    logical, intent(out) :: output
     double precision :: result
-    call random_number(result)
-    output = low + (result * (high - low))
-end subroutine random_float
+    call canonical(result)
+    output = result * 100 < percent
+end subroutine percent_true
 
 subroutine random_below(limit, output)
     implicit none
@@ -73,33 +67,6 @@ subroutine dice(rolls, sides, output)
     end do
 end subroutine dice
 
-subroutine percent_true(percent, output)
-    implicit none
-    double precision, intent(in) :: percent
-    logical, intent(out) :: output
-    double precision :: result
-    call canonical(result)
-    output = result * 100 < percent
-end subroutine percent_true
-
-subroutine triangular(low, high, mode, output)
-    implicit none
-    double precision, intent(in) :: low, high, mode
-    double precision, intent(out) :: output
-    double precision :: rand, mode_factor
-    if (low == high) then
-        output = low
-        return
-    endif
-    call canonical(rand)
-    mode_factor = (mode - low) / (high - low)
-    if (rand > mode_factor) then
-        output = high + (low - high) * SQRT((1.0 - rand) * (1.0 - mode_factor))
-    else
-        output = low + (high - low) * SQRT(rand * mode_factor)
-    end if
-end subroutine triangular
-
 subroutine plus_or_minus(amount, output)
     implicit none
     integer, intent(in) :: amount
@@ -118,3 +85,36 @@ subroutine plus_or_minus_linear(amount, output)
     call dice(2, num + 1, output)
     output = output - (num + 2)
 end subroutine plus_or_minus_linear
+
+subroutine canonical(output)
+    implicit none
+    double precision, intent(out) :: output
+    call random_number(output)
+end subroutine canonical
+
+subroutine random_float(low, high, output)
+    implicit none
+    double precision, intent(in) :: low, high
+    double precision, intent(out) :: output
+    double precision :: result
+    call random_number(result)
+    output = low + (result * (high - low))
+end subroutine random_float
+
+subroutine triangular(low, high, mode, output)
+    implicit none
+    double precision, intent(in) :: low, high, mode
+    double precision, intent(out) :: output
+    double precision :: rand, mode_factor
+    if (low == high) then
+        output = low
+        return
+    endif
+    call canonical(rand)
+    mode_factor = (mode - low) / (high - low)
+    if (rand > mode_factor) then
+        output = high + (low - high) * SQRT((1.0 - rand) * (1.0 - mode_factor))
+    else
+        output = low + (high - low) * SQRT(rand * mode_factor)
+    end if
+end subroutine triangular

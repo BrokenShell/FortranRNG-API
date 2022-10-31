@@ -1,3 +1,5 @@
+## FortranRNG for Python API
+
 ### Tech Stack
 - FastAPI
 - FortranRNG
@@ -26,9 +28,15 @@
 - `triangular(low: float, high: float, mode: float) -> float`
 
 ### Development Log
+#### FortranRNG API v0.0.5
+- Updates documentation
+- Fixes a few minor typos
+- Adds test suite `/tests/main.py`
+
 #### FortranRNG API v0.0.4
 - Adds development log
 - Updates documentation
+- Renames shell script to lesson confusion
 
 #### FortranRNG API v0.0.3
 - Fixes name conflict `random_int` => `random_integer`
