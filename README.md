@@ -28,6 +28,9 @@
 - `triangular(low: float, high: float, mode: float) -> float`
 
 ### Development Log
+#### FortranRNG API v0.0.6
+- Fixes random typos
+
 #### FortranRNG API v0.0.5
 - Updates documentation
 - Fixes a few minor typos
@@ -43,7 +46,7 @@
 - FortranRNG Release v1.1.1
 
 #### FortranRNG API v0.0.2
-- Adds `persent_true`, `plus_or_minus` & `plus_or_minus_linear`
+- Adds `percent_true`, `plus_or_minus` & `plus_or_minus_linear`
 - FortranRNG Beta v0.1.1
 
 #### FortranRNG API v0.0.1
