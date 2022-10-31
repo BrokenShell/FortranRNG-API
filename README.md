@@ -1,11 +1,9 @@
-## FortranRNG API
-
 ### Tech Stack
-- FortranRNG
 - FastAPI
-- Python 3.7
-- Fortran 90
-- Amazon Linux 2
+- FortranRNG
+- Python3
+- Fortran
+- Amazon Linux
 - Docker
 
 ### Random Generator Features
@@ -27,12 +25,19 @@
 - `random_float(low: float, high: float) -> float`
 - `triangular(low: float, high: float, mode: float) -> float`
 
-### Build API Docker Image Locally
-```shell
-docker build . -t fortran-rng
-```
+### Development Log
+#### FortranRNG API v0.0.4
+- Adds development log
+- Updates documentation
 
-### Run API Docker Image Locally
-```shell
-docker run -it -p 8000:8000 fortran-rng
-```
+#### FortranRNG API v0.0.3
+- Fixes name conflict `random_int` => `random_integer`
+- FortranRNG Release v1.1.1
+
+#### FortranRNG API v0.0.2
+- Adds `persent_true`, `plus_or_minus` & `plus_or_minus_linear`
+- FortranRNG Beta v0.1.1
+
+#### FortranRNG API v0.0.1
+- Basic Functionality
+- FortranRNG Alpha v0.0.1
