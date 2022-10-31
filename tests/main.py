@@ -3,19 +3,14 @@ import FortranRNG
 
 
 def boolean_generators():
-    print("### Boolean Generator Tests")
-    print("```")
     MonkeyScope.distribution_timer(
         FortranRNG.percent_true, 33.333,
         post_processor=bool,
         label=f"FortranRNG.percent_true(33.333) => bool[True, False] : True ~= 33.333%",
     )
-    print("```")
 
 
 def integer_generators():
-    print("### Integer Generator Tests")
-    print("```")
     MonkeyScope.distribution_timer(
         FortranRNG.random_below, 10,
         label="FortranRNG.random_below(10) => [0, 10)",
@@ -44,12 +39,9 @@ def integer_generators():
         FortranRNG.plus_or_minus_linear, 3,
         label=f"FortranRNG.plus_or_minus_linear(3) => [-3, 3] ~= 0",
     )
-    print("```")
 
 
 def float_generators():
-    print("### Float Generator Tests")
-    print("```")
     MonkeyScope.distribution_timer(
         FortranRNG.canonical,
         post_processor=lambda x: int(x * 10),
@@ -65,11 +57,13 @@ def float_generators():
         post_processor=round,
         label=f"FortranRNG.triangular(0.0, 10.0, 5.0) => round[0, 10] ~= 5.0",
     )
-    print("```")
 
 
 if __name__ == '__main__':
-    print("\n## FortranRNG Test Suite")
+    print("\nFortranRNG Test Suite\n")
+    print("Boolean Generator Tests")
     boolean_generators()
+    print("Integer Generator Tests")
     integer_generators()
+    print("Float Generator Tests")
     float_generators()

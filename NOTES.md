@@ -34,6 +34,9 @@ docker run -it -p 8000:8000 fortran-rng
 
 ---
 ## FortranRNG Developer Log
+### FortranRNG API v0.0.8
+- Updates test suite format
+
 ### FortranRNG API v0.0.7
 - Moves Developer Log to `/NOTES.md`
 
