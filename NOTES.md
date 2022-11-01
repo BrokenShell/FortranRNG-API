@@ -39,22 +39,22 @@ docker run -it -p 8000:8000 fortran-rng-api
 
 ---
 ## FortranRNG API Developer Log
+### FortranRNG API v1.0.4
+- Updates documentation
+
 ### FortranRNG API v1.0.3
 - Updates documentation
-- FortranRNG Release v1.1.7
 
 ### FortranRNG API v1.0.2
-- FortranRNG Release v1.1.6
+- Updates documentation
 
 ### FortranRNG API v1.0.1
 - Adds LICENSE (Free for non-commercial use)
 - Updates documentation
-- FortranRNG Release v1.1.5
 
 ### FortranRNG API v1.0.0
 - First Release Candidate
 - Updates build and run scripts
-- FortranRNG Release v1.1.4
 
 ### FortranRNG API v0.1.1
 - Adds links to repo & docs
@@ -62,13 +62,10 @@ docker run -it -p 8000:8000 fortran-rng-api
 
 ### FortranRNG API v0.1.0
 - Adds ZeroCool algorithms: `middle_linear` and `quantum_linear`
-- FortranRNG Release v1.1.3
 - Updates test suite to include new algorithms
 
 ### FortranRNG API v0.0.9
 - Adds ZeroCool algorithms: `random_index`, `front_linear` and `back_linear`
-- FortranRNG Release v1.1.2
-- Updates test suite to include new algorithms
 
 ### FortranRNG API v0.0.8
 - Updates test suite format
@@ -82,7 +79,6 @@ docker run -it -p 8000:8000 fortran-rng-api
 ### FortranRNG API v0.0.5
 - Updates documentation
 - Fixes a few minor typos
-- Adds test suite `/tests/main.py`
 
 ### FortranRNG API v0.0.4
 - Adds development log
@@ -91,12 +87,9 @@ docker run -it -p 8000:8000 fortran-rng-api
 
 ### FortranRNG API v0.0.3
 - Fixes name conflict `random_int` => `random_integer`
-- FortranRNG Release v1.1.1
 
 ### FortranRNG API v0.0.2
 - Adds `percent_true`, `plus_or_minus` and `plus_or_minus_linear`
-- FortranRNG Beta v0.1.1
 
 ### FortranRNG API v0.0.1
 - Basic Functionality
-- FortranRNG Alpha v0.0.1
