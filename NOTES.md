@@ -1,4 +1,4 @@
-# FortranRNG Developer Notes
+# FortranRNG API Developer Notes
 To run the API locally you have two options: 1. Virtual environment or 2. Docker image. You do not need both. Handy shell scripts for both strategies are included for *nix environments.
 
 ## 1. Local Virtual Environment
@@ -38,7 +38,12 @@ docker run -it -p 8000:8000 fortran-rng-api
 ```
 
 ---
-## FortranRNG Developer Log
+## FortranRNG API Developer Log
+### FortranRNG API v1.0.1
+- Adds LICENSE (Free for non-commercial use)
+- Updates documentation
+- FortranRNG Release v1.1.4
+
 ### FortranRNG API v1.0.0
 - First Release Candidate
 - Updates build and run scripts

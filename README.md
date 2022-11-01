@@ -5,13 +5,16 @@
 - [General Docs](https://github.com/BrokenShell/FortranRNG-API/blob/main/README.md)
 - [Dev Notes](https://github.com/BrokenShell/FortranRNG-API/blob/main/NOTES.md)
 
-### Tech Stack
-- FastAPI
-- FortranRNG
-- Python3
-- Fortran
-- Amazon Linux
-- Docker
+### API Tech Stack
+- Host Logic: Python3.7
+  - Web Framework: FastAPI
+  - Performance & Test Suite: MonkeyScope
+- Engine Logic: Fortran90 compiled for Python
+  - Random Engine: FortranRNG.f90
+- DevOps: Shell Scripts
+- Server: Uvicorn on NGINX
+- Platform: Amazon Linux in Docker
+- Hosting: AWS Elastic Beanstalk
 
 ### Random Generator Features
 

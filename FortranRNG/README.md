@@ -1,5 +1,10 @@
 # FortranRNG
 ## Fortran RNG for Python3
+Installation requires a modern Fortran compiler.
+- Gfortran (macOS `brew install gcc`)
+- Gfortran (Debian Linux `apt install gcc gfortran`)
+- Gfortran (Amazon Linux `yum groupinstall "Development Tools"`)
+- Cygwin (Windows `www.cygwin.org/cygwin`, good luck with that!)
 
 ### PyPi Installation
 ```shell
