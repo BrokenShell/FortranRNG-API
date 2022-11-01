@@ -1,5 +1,10 @@
 ## FortranRNG for Python API
 
+### Repo & Documentation
+- [GitHub Repo](https://github.com/BrokenShell/FortranRNG-API)
+- [General Docs](https://github.com/BrokenShell/FortranRNG-API/blob/main/README.md)
+- [Dev Notes](https://github.com/BrokenShell/FortranRNG-API/blob/main/NOTES.md)
+
 ### Tech Stack
 - FastAPI
 - FortranRNG

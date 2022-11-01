@@ -1,1 +1,1 @@
-docker build . -t fortran-rng
+docker build . -t fortran-rng-api

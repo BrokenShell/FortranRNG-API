@@ -1,10 +1,12 @@
 # FortranRNG Developer Notes
-To run the API locally you two choices: local virtual environment or Docker. Shell scripts are included for *nix environments.
+To run the API locally you have two options: 1. Virtual environment or 2. Docker image. You do not need both. Handy shell scripts for both strategies are included for *nix environments.
 
-## Local Virtual Environments
+## 1. Local Virtual Environment
+Rebuilding is only required if changes are made to `/FortranRNG` or `requirements.txt`.
 
-### Install Virtual Environment `./venv-install.sh`
-Assumes venv is built and active.
+### Build API: Virtual Environment `./venv-build.sh`
+This assumes a virtual environment is active. The virtual environment used in testing is `venv` but feel free to use whatever you like. The build and run scripts may not work with all virtual environments without alteration. Season to taste.
+
 ```shell
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install -r requirements.txt
@@ -13,32 +15,42 @@ rm -rf ./FortranRNG/build
 rm -rf ./FortranRNG/FortranRNG.egg-info
 ```
 
-### Run Virtual Environment `./venv-run.sh`
+### Run API: Virtual Environment `./venv-run.sh`
+Assumes port 8000 is available on localhost.
 ```shell
 python -m uvicorn app.api:API --host=0.0.0.0 --port=8000
 ```
+Restart the server if any minor changes are made to local files, or add the `--reload` flag to the above script to restart the server automatically when changes are made. This works for detecting change in Python files only.
 
-## Local Docker Environments
+## 2. Local Docker Environment
+Rebuilding docker is required for any changes made locally.
 
-### Build Docker Image Locally `./docker-build.sh`
+### Build API: Docker Image `./docker-build.sh`
 Assumes Docker Desktop is running in the background.
 ```shell
-docker build . -t fortran-rng
+docker build . -t fortran-rng-api
 ```
 
-### Run Docker Image Locally `./docker-run.sh`
+### Run API: Docker Image `./docker-run.sh`
 Assumes port 8000 is available on localhost.
 ```shell
-docker run -it -p 8000:8000 fortran-rng
+docker run -it -p 8000:8000 fortran-rng-api
 ```
 
 ---
 ## FortranRNG Developer Log
+### FortranRNG API v1.0.0
+- First Release Candidate
+- Updates build and run scripts
+
+### FortranRNG API v0.1.1
+- Adds links to repo & docs
+- Updates documentation
+
 ### FortranRNG API v0.1.0
 - Adds ZeroCool algorithms: `middle_linear` and `quantum_linear`
 - FortranRNG Release v1.1.3
 - Updates test suite to include new algorithms
-
 
 ### FortranRNG API v0.0.9
 - Adds ZeroCool algorithms: `random_index`, `front_linear` and `back_linear`
