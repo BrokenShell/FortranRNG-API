@@ -1,9 +1,10 @@
 ## FortranRNG for Python API
 
-### Repo & Documentation
+### Repository & Documentation
 - [GitHub Repo](https://github.com/BrokenShell/FortranRNG-API)
 - [General Docs](https://github.com/BrokenShell/FortranRNG-API/blob/main/README.md)
 - [Dev Notes](https://github.com/BrokenShell/FortranRNG-API/blob/main/NOTES.md)
+- [PyPi](https://pypi.org/project/FortranRNG)
 
 ### API Tech Stack
 - Host Logic: Python3.7

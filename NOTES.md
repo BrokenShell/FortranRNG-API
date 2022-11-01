@@ -39,14 +39,18 @@ docker run -it -p 8000:8000 fortran-rng-api
 
 ---
 ## FortranRNG API Developer Log
+### FortranRNG API v1.0.2
+- FortranRNG Release v1.1.6
+
 ### FortranRNG API v1.0.1
 - Adds LICENSE (Free for non-commercial use)
 - Updates documentation
-- FortranRNG Release v1.1.4
+- FortranRNG Release v1.1.5
 
 ### FortranRNG API v1.0.0
 - First Release Candidate
 - Updates build and run scripts
+- FortranRNG Release v1.1.4
 
 ### FortranRNG API v0.1.1
 - Adds links to repo & docs
