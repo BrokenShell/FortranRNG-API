@@ -8,10 +8,10 @@
 
 ### API Tech Stack
 - Host Logic: Python3.7
-  - Web Framework: FastAPI
-  - Performance & Test Suite: MonkeyScope
+- Web Framework: FastAPI
+- Performance & Test Suite: MonkeyScope
 - Engine Logic: Fortran90 compiled for Python
-  - Random Engine: FortranRNG.f90
+- Random Engine: FortranRNG.f90
 - DevOps: Shell Scripts
 - Server: Uvicorn on NGINX
 - Platform: Amazon Linux in Docker
@@ -36,7 +36,7 @@
 - `random_float(low: float, high: float) -> float`
 - `triangular(low: float, high: float, mode: float) -> float`
 
-#### Random ZeroCool Index Generators
+#### ZeroCool Index Generators
 - `random_index(limit: int) -> int`
 - `front_linear(limit: int) -> int`
 - `middle_linear(limit: int) -> int`

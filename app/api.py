@@ -8,7 +8,7 @@ with open("README.md", "r") as file:
 API = FastAPI(
     title='FortranRNG API',
     description=description,
-    version='1.0.4',
+    version='1.0.5',
     docs_url='/',
 )
 

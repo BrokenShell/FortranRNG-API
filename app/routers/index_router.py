@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 import FortranRNG
 
-Router = APIRouter(tags=["Random ZeroCool Index"])
+Router = APIRouter(tags=["ZeroCool Index"])
 
 
 @Router.get("/random-index")
