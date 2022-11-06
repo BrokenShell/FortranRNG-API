@@ -40,6 +40,9 @@ docker run -it -p 8000:8000 fortran-rng-api
 ---
 ## FortranRNG API Developer Log
 ### FortranRNG API v1.0.5
+- Bug fix: dice (reset tmp var each iteration)
+
+### FortranRNG API v1.0.5
 - Minor cleanup
 
 ### FortranRNG API v1.0.4
