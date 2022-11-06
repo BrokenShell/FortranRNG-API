@@ -64,6 +64,7 @@ subroutine dice(rolls, sides, output)
     integer, intent(out) :: output
     integer :: n, result
     do n = 1, rolls
+        result = 0
         call d(sides, result)
         output = output + result
     end do

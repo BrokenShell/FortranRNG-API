@@ -16,7 +16,7 @@ setup(
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
     url="https://github.com/BrokenShell/FortranRNG-API/tree/main/FortranRNG",
-    version="1.2.0",
+    version="1.3.0",
     ext_modules=[
         Extension(name='FortranRNG', sources=['FortranRNG.f90']),
     ],

@@ -96,3 +96,13 @@ docker run -it -p 8000:8000 fortran-rng-api
 
 ### FortranRNG API v0.0.1
 - Basic Functionality
+
+---
+## Future Plans
+- Random Array
+- Random Matrix
+- Linear Algebra
+- Abstract Algebra
+- Category Theory
+- Lambda Calculus
+- Theory of Everything
