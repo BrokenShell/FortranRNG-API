@@ -1,5 +1,4 @@
-from numpy.distutils.core import setup
-from numpy.distutils.core import Extension
+from numpy.distutils.core import setup, Extension
 
 with open("README.md", "r") as file:
     long_description = file.read()
@@ -16,7 +15,7 @@ setup(
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
     url="https://github.com/BrokenShell/FortranRNG-API/tree/main/FortranRNG",
-    version="1.5.0",
+    version="1.5.1",
     ext_modules=[
         Extension(
             name="FortranRNG",
