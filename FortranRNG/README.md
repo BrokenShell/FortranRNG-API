@@ -37,3 +37,5 @@ python3 -m pip install ./FortranRNG
   - `FortranRNG.middle_linear(limit) -> int`
   - `FortranRNG.back_linear(limit) -> int`
   - `FortranRNG.quantum_linear(limit) -> int`
+- Arrays
+  - `FortanRNG.array.random_below(limit, width, height) -> np.array`

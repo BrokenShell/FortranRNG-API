@@ -12,14 +12,18 @@ dev_status = {
 }
 
 setup(
-    name='FortranRNG',
+    name="FortranRNG",
     author="Robert Sharp",
     author_email="webmaster@sharpdesigndigital.com",
     url="https://github.com/BrokenShell/FortranRNG-API/tree/main/FortranRNG",
-    version="1.3.0",
+    version="1.5.0",
     ext_modules=[
-        Extension(name='FortranRNG', sources=['FortranRNG.f90']),
+        Extension(
+            name="FortranRNG",
+            sources=["FortranRNG.f90", "ArrayRNG.f90", "MatrixRNG.f90"],
+        ),
     ],
+    install_requires=["numpy"],
     license="Free for non-commercial use",
     description="Fortran RNG for Python3",
     long_description=long_description,

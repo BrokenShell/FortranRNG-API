@@ -1,4 +1,13 @@
 ## FortranRNG Developer Log
+### FortranRNG v1.5.0
+- Adds array_canonical, matrix_canonical
+
+### FortranRNG v1.4.0
+- Initial attempts at array & matrix distributions
+
+### FortranRNG v1.3.0
+- Updates documentation
+
 ### FortranRNG v1.2.0
 - Release Package
 

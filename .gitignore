@@ -126,6 +126,7 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+scratch.py
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

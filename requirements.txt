@@ -1,4 +1,7 @@
+Cython
 FastAPI
 numpy
-uvicorn[standard]
+MonkeyScope
+pandas
 twine
+uvicorn[standard]
